@@ -1,4 +1,4 @@
-#Lab 2
+#Lecture 2
 
 Make sure you are in an environment with ROOT
 
