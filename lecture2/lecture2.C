@@ -41,3 +41,17 @@ void create_histogram(){
     //Save the current state of the canvas
     c1->SaveAs("test.pdf");
 }
+
+
+//This code runs and makes a plot, but it isn't perfect and there are many things that can be done
+//Most learning will come from having a goal, so here are some ideas we can try
+
+//1. The histogram looks pretty bumpy, but we see the numbers are all very close to eachother, its misleading
+//   Lets change the Y axis to show us the big picture (that its actually very flat)
+
+//2. A uniform distribution is not very exciting, lets look at TRandom to see what else we can do
+
+//3. Now that we can change what we plot, what if we plot multiple things at once? Lets add another histogram
+
+//4. How do we know which histogram is which? Lets change the color of one of them, maybe even create a legend
+//   https://root.cern.ch/doc/master/classTLegend.html
