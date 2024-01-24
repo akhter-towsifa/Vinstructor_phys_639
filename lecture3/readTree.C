@@ -24,7 +24,7 @@ void readTree()
   //You can use the same canvas to draw multiple plots!
   //canvas->Divide(n) will divide the canvas into n number of sections
   //canvas->Divide(n,m) is also alowed
-  c1->Divide(3);
+  c1->Divide(2,2);
 
 
   //Create some histograms to fill with the branch in a loop over entries (Option 1)
@@ -85,6 +85,15 @@ void readTree()
   pt2->AddText("Notice the uniform dist lost half its entries");
   pt2->Draw();
 
+
+
+  c1->cd(4);
+  //Just for fun, lets plot a 2D histogram and cut it by a function of both of values
+  TH2F *hist_2d = new TH2F("gaus_by_uniform", "2D Hist", 100, 0, 10, 100, 0, 10);
+  TCut cut2 = "(gaus_distribution * uniform_distribution) > 10";
+  tree->Draw("gaus_distribution:uniform_distribution", cut2, "colz");
+
   c1->SaveAs("example_plot.pdf");
+
 
 }
