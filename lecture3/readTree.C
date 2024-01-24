@@ -6,6 +6,7 @@
 #include <TCanvas.h>
 #include <TPaveText.h>
 #include <TCut.h>
+#include <TH2.h>
 
 void readTree()
 {
