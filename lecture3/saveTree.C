@@ -13,6 +13,9 @@ void saveTree() {
 
   //Will use TRandom to generate values again
   TRandom random;
+  //Initial seed is NOT RANDOM, so results will be the same
+  //Setting seed to 0 will give us a new random seed
+  random.SetSeed(0);
 
   //TTrees need to use references for data, the variable must already exist for the branch to be filled
   float uniform_dist;
